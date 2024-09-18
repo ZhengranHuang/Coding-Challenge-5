@@ -7,4 +7,6 @@ const inventory = [
 ];
 //use sample Data to create the array
 
-//Task 2:
+//Task 2:Create an Orders Array of Order Objects
+const order = [];
+//empty array
