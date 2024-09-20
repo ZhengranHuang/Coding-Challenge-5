@@ -27,9 +27,9 @@ console.log(`The order is completable.Itemsleft ${itemsleft},customerName${custo
 }
 //use push() to give order array properties
 order.push(
-{ customername: 'aa',quantity: 5, status:'Pending'}
+{customername: 'aa',product: 'Latte', quantity: 5, status:'Pending'}
 )
-placeOrder(order[0], Latte)//Wrong output:(
+placeOrder(order[0])//Wrong output:(
 
 //Task 4:Create a Function to Calculate Total for an Order
 function calculateOrderTotal(order){
@@ -38,7 +38,22 @@ return i + (product.price * product.quantity);
 }, 0);
 return totalValue;
 }
+order.push(
+{customername: 'bb',product: 'Espresso', quantity: 3, status:'Pending'})
 calculateOrderTotal(order)
+
+//Task 5:Create a Function to Mark an Order as Completed
+function completeOrder(customerName){
+let product = order.find(product => product.name === item.name);
+if(product){order.status = 'Completed'};
+console.log(`Order completed.`);
+if(!product);
+console.log('Order not exist.')
+}
+completeOrder('aa')
+
+//Task 6: Create a Function to Check Pending Orders
+
 
 
 
