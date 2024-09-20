@@ -53,7 +53,12 @@ console.log('Order not exist.')
 completeOrder('aa')
 
 //Task 6: Create a Function to Check Pending Orders
-
-
+function checkPendingOrders(order){
+order.forEach(order=>{
+if(order.status === 'Pending'){
+console.log(`${order.customerName}'s order status is Pending`)
+}
+})
+}
 
 
