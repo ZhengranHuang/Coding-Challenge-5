@@ -10,3 +10,28 @@ const inventory = [
 //Task 2:Create an Orders Array of Order Objects
 const order = [];
 //empty array
+
+//Task 3:Create a Function to Place an Order
+
+//use push() to give order array properties
+function placeOrder(customerName, items){
+let itemsleft;
+items.forEach(item => {
+//loops through each item in the itemsOrdered array
+let product = inventory.find(product => product.name === item.name)
+if (!product){console.log(`The product is not exist.`);}
+else if (product.quantity < item.quantity){console.log(`The product is not enough for order.`)}
+if (product){itemsleft = product.quantity - item.quantity;
+console.log(`The order is completable.Itemsleft ${itemsleft},customerName${order.customerName},Status${order.status}`);
+}
+}
+)
+}
+order.push(
+{ customername: 'aa',quantity: 5, status:'Pending'}
+)
+placeOrder(order[0], Latte)//Wrong output:(
+
+
+
+
